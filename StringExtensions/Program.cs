@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using ExtensionMethods;
 
 namespace StringExtensions
 {
@@ -22,9 +24,14 @@ namespace StringExtensions
             Console.WriteLine("Fun with string extensions!");
             Console.WriteLine("---------------------------");
 
+            Console.WriteLine(writings[0].Capitalize());
+
+            Console.WriteLine(writings[5].ToCamelCase());
+
             foreach(string s in writings)
             {
                 Console.WriteLine(s);
+                Console.WriteLine(s.WordCount());
                 Console.WriteLine("---------------------------");
             }
             
